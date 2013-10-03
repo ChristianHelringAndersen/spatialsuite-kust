@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<theme>
+    
+    <!--   
+    ===============================================================
+    CBkort version 2.x, copyright Carl Bro GIS&IT, 2006
+    ===============================================================
+    $Archive: /Products/CBKort2/development/2.5/standard/wwwroot/WEB-INF/config/modules/standard/kms2/themes/theme-kms-dtkskaerm.xml $  
+    $Date: 25-11-08 15:40 $
+    $Revision: 1 $   
+    $Author: Kpo $
+    =============================================================== 
+    -->    
+    
+    <cbinfo-metadata>
+    <param name="metadata.text"><![CDATA[Online fra Kulturstyrelsen. <BR> Temaet vises ved ca 1:25.000</BR>]]></param> 
+        <!--para name="metadata.url.javascript">window.open("http://kort.arealinfo.dk/fagtekster/metadata/kuas_fortidsminder_punkt_fredet.htm", "rettigheder", "width=500,height=500, scrollbars=1, resizable=1")</param-->	
+    </cbinfo-metadata>
+         
+    <clientlayers>
+        <clientlayer>
+            <datasource>kuas_relief</datasource>
+            <singletile>false</singletile>
+        </clientlayer>
+    </clientlayers>
+	
+    <layer name="kuas_relief" type="RASTER">
+        [datasource:kuas_relief.mapfile-datasource]
+		<maxscale>250000</maxscale>        
+       <class>
+            <name>Reliefkort fra KUST</name>
+        </class>
+        <!--class>
+            <name>Fredede fortidsminder - 100m beskyttelseslinje</name>
+            <style>
+                <symbol>circle</symbol>
+                <color>255 0 200</color>
+                <outlinecolor>255 0 200</outlinecolor>
+                <size>9</size>
+            </style>
+        </class-->
+        <debug>false</debug>
+        <dump>false</dump>
+    </layer>
+    <!--layer name="dummy" type="point">
+        <maxscale>250000</maxscale>
+        <class>
+            <name>Fortidsminde</name>
+            <style>
+                <color>0 255 0 </color>
+                <symbol>circle</symbol>
+                <size>2</size>                    
+            </style>
+        </class>
+    </layer-->
+</theme>
+

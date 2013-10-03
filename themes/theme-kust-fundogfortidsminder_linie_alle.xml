@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<theme>
+    
+    <!--   
+    ===============================================================
+    CBkort version 2.x, copyright Carl Bro GIS&IT, 2006
+    ===============================================================
+    $Archive: /Products/CBKort2/development/2.5/standard/wwwroot/WEB-INF/config/modules/standard/kms2/themes/theme-kms-dtkskaerm.xml $  
+    $Date: 25-11-08 15:40 $
+    $Revision: 1 $   
+    $Author: Kpo $
+    =============================================================== 
+    -->    
+    
+    <cbinfo-metadata>
+    <param name="metadata.text"><![CDATA[Online fra Kulturstyrelsen. <BR> Temaet vises ved ca 1:250.000</BR>]]></param> 
+    <param name="metadata.img.url">http://www.geodata-info.dk/Portal/ShowMetadata.aspx?id=45606839-a25d-4cf9-a7cd-b3a3d718140e</param>	
+    </cbinfo-metadata>
+         
+	<clientlayers>
+        <clientlayer>
+            <datasource>kust_wms_fundogfortidsminder_linie_alle</datasource>
+            <singletile>false</singletile>
+        </clientlayer>
+    </clientlayers>
+    
+    <layer name="kust_wms_fundogfortidsminder_linie_alle" type="RASTER">
+        [datasource:kust_wms_fundogfortidsminder_linie_alle.mapfile-datasource]
+		<maxscale>250000</maxscale>
+	   <class>
+            <name>Fortidsminde linier</name>
+            <style>
+                <color>255 169 21</color>
+                <outlinecolor>255 169 21</outlinecolor>
+            </style>
+        </class>
+        <debug>false</debug>
+        <dump>false</dump>
+    </layer>
+</theme>
+

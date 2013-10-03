@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<theme>
+    <cbinfo-metadata>
+        <param name="metadata.url"/>
+        <param name="copyright-text">&#169; Kulturarvsstyrelsen</param>
+        <param name="copyright.url">http://www.kulturarv.dk/databaser/fredede-og-bevaringsvaerdige-bygninger/</param>
+        <param name="metadata.text">Fredede bygninger.</param>
+    </cbinfo-metadata>
+
+    <clientlayers>
+        <clientlayer>
+            <datasource>wms_fbb_bebyggetstruktur_udsigt</datasource>
+            <singletile>false</singletile>
+        </clientlayer>
+    </clientlayers>
+
+    <layer name="view_bebyggetstruktur_udsigt" type="RASTER">
+    [datasource:wms_fbb_bebyggetstruktur_udsigt.mapfile-datasource]        
+        <transparency>100</transparency>
+    </layer>
+	
+	 <!-- dummy data til at danne signaturforklaring -->
+    
+    <layer datasource="dummy" name="dummy" type="point">
+        <class>
+            <name>Udsigt, vue</name>
+			<style>
+                <symbol>udsigt</symbol>
+            </style>
+        </class>
+	</layer>
+</theme>

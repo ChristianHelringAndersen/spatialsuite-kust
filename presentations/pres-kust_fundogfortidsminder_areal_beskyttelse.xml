@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<presentation xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <text name="overskrift" value="Fortidsminde areal"
+        plural="Fortidsminde arealer"/>
+    <columns>
+        <column format="heading">
+            <label>'Fredningsnr:' + TOSTRING(frednr)</label>
+            <value>'Fredningsnr:' + TOSTRING(frednr)</value>
+        </column> 
+        <column format="org-pcolid">
+            <label> if IsDefined(shape_wkt) 
+            then GeometryType(shape_wkt) else
+                "GEOMETRY UNDEFINED" 
+                endif
+            </label>
+            <value>pcolid</value>
+        </column>
+        
+
+       <column format="hyperlink">
+            <label>'Link til fortidsminde'</label>
+            <value>if IsDefined(url) then TOSTRING(url) else 'ikketilgængelig' endif</value>
+        </column> 
+
+        <column name="1">
+            <label>'Fredningsnr:'</label>
+            <value>if IsDefined(frednr) then TOSTRING(frednr) else 'ikke tilgængelig' endif</value>
+        </column>
+         <column name="2">
+            <label>'Stednr:'</label>
+            <value>if IsDefined(frednr) then TOSTRING(stednr) else 'ikke tilgængelig' endif</value>
+        </column>
+         <column name="3">
+            <label>'Loknr:'</label>
+            <value>if IsDefined(frednr) then TOSTRING(loknr) else 'ikke tilgængelig' endif</value>
+        </column>
+        <column name="4">
+             <label>'Anlægstype:'</label>
+            <value>if IsDefined(anlaegstype) then TOSTRING(anlaegstype) else 'ikke tilgængelig' endif</value>
+        </column>
+        <column name="5">
+             <label>'Datering:'</label>
+            <value>if IsDefined(datering) then TOSTRING(datering) else 'ikke tilgængelig' endif</value>
+        </column> 
+        
+
+    </columns> 
+</presentation>

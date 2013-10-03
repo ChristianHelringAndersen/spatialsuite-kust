@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<theme>
+    <cbinfo-metadata>
+        <param name="metadata.url"/>
+        <param name="copyright-text">&#169; Kulturarvsstyrelsen</param>
+        <param name="copyright.url">http://www.kulturarv.dk/databaser/fredede-og-bevaringsvaerdige-bygninger/</param>
+        <param name="metadata.text">Fredede bygninger.</param>
+    </cbinfo-metadata>
+
+    <clientlayers>
+        <clientlayer>
+            <datasource>wms_fbb_bebyggetstruktur_torv</datasource>
+            <singletile>false</singletile>
+        </clientlayer>
+    </clientlayers>
+
+    <layer name="view_bebyggetstruktur_torv" type="RASTER">
+    [datasource:wms_fbb_bebyggetstruktur_torv.mapfile-datasource]        
+        <transparency>60</transparency>
+    </layer>
+	
+	 <!-- dummy data til at danne signaturforklaring -->
+    
+    <layer datasource="dummy" name="dummy" type="polygon">
+        <class>
+            <name>Torv, plads</name>
+			<style>
+                <color>169 169 169</color>
+                <outlinecolor>0 0 0</outlinecolor>
+            </style>
+        </class>
+		<transparency>60</transparency>
+        <debug>false</debug>
+        <dump>false</dump>
+    </layer>
+</theme>

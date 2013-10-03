@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<theme>
+    <cbinfo-metadata>
+        <param name="metadata.url"/>
+        <param name="copyright-text">&#169; Kulturarvsstyrelsen</param>
+        <param name="copyright.url">http://www.kulturarv.dk/databaser/fredede-og-bevaringsvaerdige-bygninger/</param>
+        <param name="metadata.text">Bebygget struktur, rumdannende bygning</param>
+    </cbinfo-metadata>
+
+    <clientlayers>
+        <clientlayer>
+            <datasource>wms_fbb_bebyggetstruktur_rumdannendebygning</datasource>
+            <singletile>false</singletile>
+        </clientlayer>
+    </clientlayers>
+
+    <layer name="view_bebyggetstruktur_rumdannendebygning" type="RASTER">
+    [datasource:wms_fbb_bebyggetstruktur_rumdannendebygning.mapfile-datasource]        
+        <transparency>100</transparency>
+    </layer>
+	
+	 <!-- dummy data til at danne signaturforklaring -->
+    
+    <layer datasource="dummy" name="dummy" type="point">
+        <class>
+            <name>Rumdannende bygning</name>
+			<style>
+                <symbol>circle</symbol>
+				<size>8</size>
+				<color>255 155 57</color>
+            </style>
+        </class>
+	</layer>
+</theme>

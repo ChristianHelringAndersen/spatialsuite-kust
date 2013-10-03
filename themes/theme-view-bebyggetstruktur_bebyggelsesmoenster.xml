@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<theme>
+    <cbinfo-metadata>
+        <param name="metadata.url"/>
+        <param name="copyright-text">&#169; Kulturarvsstyrelsen</param>
+        <param name="copyright.url">http://www.kulturarv.dk/databaser/fredede-og-bevaringsvaerdige-bygninger/</param>
+        <param name="metadata.text">Bebygget struktur, bebyggelsesmønster</param>
+    </cbinfo-metadata>
+
+    <clientlayers>
+        <clientlayer>
+            <datasource>wms_fbb_bebyggetstruktur_bebyggelsesmoenster</datasource>
+            <singletile>false</singletile>
+        </clientlayer>
+    </clientlayers>
+
+    <layer name="view_bebyggetstruktur_bebyggelsesmoenster" type="RASTER">
+    [datasource:wms_fbb_bebyggetstruktur_bebyggelsesmoenster.mapfile-datasource]        
+        <transparency>100</transparency>
+    </layer>
+	
+	 <!-- dummy data til at danne signaturforklaring -->
+    
+    <layer datasource="dummy" name="dummy" type="polygon">
+        <class>
+            <name>Bebyggelsesmønster</name>
+			<style>
+                <color>255 204 156</color>
+				<outlinecolor>255 182 109</outlinecolor>
+            </style>
+        </class>
+	</layer>
+</theme>

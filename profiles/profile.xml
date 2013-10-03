@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<profile defaultpage="content">
+
+    <themegroups>    
+        <themegroup displayname="Fredede og bevaringsværdige bygninger" expanded="false" name="fbb" type="checkbutton"/>
+        <themegroup displayname="Fund &amp; fortidsminder" expanded="false" name="kust" type="checkbutton"/>
+		<themegroup displayname="Bebygget struktur" expanded="false" name="fbb-save" type="checkbutton"/>
+    </themegroups>
+
+        <!-- ======================================================              -->
+        <!-- Fredede og bevaringsværdige bygninger                               -->
+        <!-- ======================================================              -->
+
+    <themes>
+        <theme module="kust" name="theme-view_bygning_fredede">
+            <themeselector>
+                <initialstate>hidden</initialstate>
+                <group>fbb</group>
+                <displayname>Fredede bygninger</displayname>
+                <selectable>true</selectable>
+            </themeselector>
+        </theme>
+        <theme module="kust" name="theme-view_bygning_bevaringssag">
+            <themeselector>
+                <initialstate>hidden</initialstate>
+                <group>fbb</group>
+                <displayname>Bygninger med bevaringssag</displayname>
+                <selectable>true</selectable>
+            </themeselector>
+        </theme>
+        <theme module="kust" name="theme-view_bygning_fredningstatus_hoej">
+            <themeselector>
+                <initialstate>hidden</initialstate>
+                <group>fbb</group>
+                <displayname>Høj bevaringsværdi</displayname>
+                <selectable>true</selectable>
+            </themeselector>
+        </theme>
+        <theme module="kust" name="theme-view_bygning_fredningstatus_med">
+            <themeselector>
+                <initialstate>hidden</initialstate>
+                <group>fbb</group>
+                <displayname>Medium bevaringsværdi</displayname>
+                <selectable>true</selectable>
+            </themeselector>
+        </theme>
+        <theme module="kust" name="theme-view_bygning_fredningstatus_lav">
+            <themeselector>
+                <initialstate>hidden</initialstate>
+                <group>fbb</group>
+                <displayname>Lav bevaringsværdi</displayname>
+                <selectable>true</selectable>
+            </themeselector>
+        </theme>
+        <theme module="kust" name="theme-view_bygning_alle">
+            <themeselector>
+                <initialstate>hidden</initialstate>
+                <group>fbb</group>
+                <displayname>Alle bygninger</displayname>
+                <selectable>true</selectable>
+            </themeselector>
+        </theme>
+		<theme module="kust" name="theme-kust-fortidsminder_punkt_fredet">
+            <themeselector>
+                <!--group>fredning</group-->
+                <group>kust</group>
+                <displayname>Fredede fortidsminder</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+		
+        <theme module="kust" name="theme-kust-fundogfortidsminder_punkt_ikkefredet">
+            <themeselector>
+                <group>kust</group>
+                <displayname>Ikke fredede fortidsminder</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+        <theme module="kust" name="theme-kust-fortidsminder_areal_beskyttelse">
+            <themeselector>
+                <group>kust</group>
+                <displayname>Fortidsminde beskyttelseslinjer</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+              
+        <theme module="kust" name="theme-kust-fundogfortidsminder_areal_alle">
+            <themeselector>
+				<group>kust</group>                
+                <displayname>Fortidsminde arealer</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+        
+        <theme module="kust" name="theme-kust-fundogfortidsminder_areal_ka">
+            <themeselector>
+                <group>kust</group>
+                <displayname>Fortidsminde - kulturarvsarealer</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+
+		<theme module="kust" name="theme-kust-fundogfortidsminder_linie_alle">
+            <themeselector>
+                <group>kust</group>
+                <displayname>Fredede fortidsminder linie</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>        
+		<theme module="kust" name="theme-kust-fundogfortidsminder_komplet">
+            <themeselector>
+				<group>kust</group>
+                <displayname>Fredede fortidsminder komplet</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+		    <!--theme module="kust" name="theme-kust-relief">
+            <themeselector>
+                <selectable>true</selectable>
+                <group>grundkort</group>
+                <displayname>Relief</displayname>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+            <downloadable>true</downloadable>
+        </theme-->
+		<theme module="kust" name="theme-view-bebyggetstruktur_indkig">
+            <themeselector>
+				<group>fbb-save</group>
+                <displayname>Sigtelinje, indkig</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+		<theme module="kust" name="theme-view-bebyggetstruktur_udsigt">
+            <themeselector>
+				<group>fbb-save</group>
+                <displayname>Udsigt, vue</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+		<theme module="kust" name="theme-view-bebyggetstruktur_dominerendebygning">
+            <themeselector>
+				<group>fbb-save</group>
+                <displayname>Dominerende bygningsværk</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+		<theme module="kust" name="theme-view-bebyggetstruktur_rumdannendebygning">
+            <themeselector>
+				<group>fbb-save</group>
+                <displayname>rumdannende bygning</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+		<theme module="kust" name="theme-view-enkeltstaaendetrae">
+            <themeselector>
+				<group>fbb-save</group>
+                <displayname>Enkeltstående træ</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+		<theme module="kust" name="theme-view-bebyggetstruktur_traeraekke">
+            <themeselector>
+				<group>fbb-save</group>
+                <displayname>Trærække, allé</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+		<theme module="kust" name="theme-view-bebyggetstruktur_vej">
+            <themeselector>
+				<group>fbb-save</group>
+                <displayname>Vej</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>		
+		<theme module="kust" name="theme-view-bebyggetstruktur_torv">
+            <themeselector>
+				<group>fbb-save</group>
+                <displayname>Torv, plads</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+		<theme module="kust" name="theme-view-bebyggetstruktur_bebyggelsesmoenster">
+            <themeselector>
+				<group>fbb-save</group>
+                <displayname>Bebyggelsesmønster</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>
+		<theme module="kust" name="theme-view-bebyggetstruktur_omfang">
+            <themeselector>
+				<group>fbb-save</group>
+                <displayname>Bebygget struktur, omfangspolygon</displayname>
+                <selectable>true</selectable>
+                <initialstate>hidden</initialstate>
+            </themeselector>
+        </theme>						
+    </themes>
+</profile>

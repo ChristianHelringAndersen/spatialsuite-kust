@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<presentation>
+  <text name="overskrift" value="Bebygget struktur - enkeltstående træ" plural="Bebyggede strukturer - enkeltstående træ"/>
+
+      <columns>
+          <column name="1">
+              <label>'BebyggetstrukturID:'</label>
+              <value>TOSTRING(bebyggetstruktur_id)</value>
+          </column>
+          <column name="2">
+              <condition>isDefined(sag)</condition>        
+              <label>'Sag:'</label>
+              <value>TOSTRING(sag)</value>
+          </column>
+          <column name="3">
+              <condition>isDefined(id)</condition>
+              <label>'Id:'</label>
+              <value>TOSTRING(id)</value>
+          </column>
+          <column name="4">
+              <condition>isDefined(indtegningsflade)</condition>
+              <label>'Indtegningsflade:'</label>
+              <value>indtegningsflade</value>
+          </column>
+          <column name="5">
+              <condition>isDefined(betegnelse)</condition>
+              <label>'Betegnelse:'</label>
+              <value>betegnelse</value>
+          </column>
+          <column name="6">
+              <condition>isDefined(beskrivelse)</condition>        
+              <label>'Beskrivelse:'</label>
+              <value>beskrivelse</value>
+          </column>
+          <column format="org-pcolid">
+              <label>
+                  if IsDefined(shape_wkt) then
+                      GeometryType(shape_wkt)
+                  else
+                      "GEOMETRY UNDEFINED"
+                  endif
+              </label>
+              <value>pcolid</value>
+          </column>
+      </columns>
+</presentation>

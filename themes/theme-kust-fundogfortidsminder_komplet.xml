@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<theme>
+    
+    <!--   
+    ===============================================================
+    CBkort version 2.x, copyright Carl Bro GIS&IT, 2006
+    ===============================================================
+    $Archive: /Products/CBKort2/development/2.5/standard/wwwroot/WEB-INF/config/modules/standard/kms2/themes/theme-kms-dtkskaerm.xml $  
+    $Date: 25-11-08 15:40 $
+    $Revision: 1 $   
+    $Author: Kpo $
+    =============================================================== 
+    -->    
+    
+    <cbinfo-metadata>
+    <param name="metadata.text"><![CDATA[Online fra Kulturstyrelsen. <BR> Temaet vises ved ca 1:250.000</BR>]]></param> 
+    <param name="metadata.img.url">http://www.geodata-info.dk/Portal/ShowMetadata.aspx?id=45606839-a25d-4cf9-a7cd-b3a3d718140e</param>	
+    </cbinfo-metadata>
+    
+	<clientlayers>
+        <clientlayer>
+            <datasource>kust_wms_fundogfortidsminder_komplet</datasource>
+            <singletile>false</singletile>
+        </clientlayer>
+    </clientlayers>
+    
+    <layer name="kust_wms_fundogfortidsminder_komplet" type="RASTER">
+        [datasource:kust_wms_fundogfortidsminder_komplet.mapfile-datasource]
+		<maxscale>250000</maxscale>        
+		<transparency>60</transparency>
+		
+        <debug>false</debug>
+        <dump>false</dump>
+    </layer>
+    <layer name="dummy" type="point">
+		<debug>false</debug>
+        <dump>false</dump>
+        <maxscale>250000</maxscale>
+        <class>
+            <name>Ikke fredet fortidsminde</name>
+            <style>
+                <symbol>circle</symbol>
+                <color>0 0 255</color>
+                <size>9</size>
+            </style>
+        </class>
+        <class>
+            <name>Fredede fortidsminder uden beskyttelseslinje</name>
+            <style>
+                <symbol>triangle</symbol>
+                <color>255 0 0</color>
+                <outlinecolor>255 0 0</outlinecolor>
+                <size>9</size>
+            </style>
+        </class>
+        <class>
+            <name>Fredede fortidsminder med 100m beskyttelseslinje</name>
+            <style>
+                <symbol>circle</symbol>
+                <color>255 0 0</color>
+                <outlinecolor>255 0 0</outlinecolor>
+                <size>9</size>
+            </style>
+        </class>
+        <class>
+            <name>Fredede fortidsminder - 100m beskyttelseslinje</name>
+            <style>
+                <symbol>circle</symbol>
+                <color>255 225 215</color>
+                <outlinecolor>0 0 0</outlinecolor>
+                <size>9</size>
+            </style>
+        </class>
+    </layer>
+    <layer name="dummy" type="polygon">
+		<debug>false</debug>
+        <dump>false</dump>
+        <maxscale>250000</maxscale>
+        <class>
+            <name>Fortidsminde kulturarvsarealer</name>
+            <style>
+                <color>204 119 34</color>
+                <outlinecolor>0 0 0</outlinecolor>
+                <size>9</size>
+            </style>
+        </class>
+		<transparency>60</transparency>
+        <class>
+            <name>Fortidsminde areal</name>
+            <style>
+                <color>0 0 0</color>
+                <outlinecolor>0 0 0</outlinecolor>
+                <size>9</size>
+            </style>
+        </class>
+		<transparency>60</transparency>
+    </layer>
+
+    
+</theme>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<theme>
+    <cbinfo-metadata>
+        <param name="metadata.url"/>
+        <param name="copyright-text">&#169; Kulturarvsstyrelsen</param>
+        <param name="copyright.url">http://www.kulturarv.dk/databaser/fredede-og-bevaringsvaerdige-bygninger/</param>
+        <param name="metadata.text">Bebygget struktur, omfangspolygon</param>
+    </cbinfo-metadata>
+
+    <clientlayers>
+        <clientlayer>
+            <datasource>wms_fbb_bebyggetstruktur_omfang</datasource>
+            <singletile>false</singletile>
+        </clientlayer>
+    </clientlayers>
+
+    <layer name="view_bebyggetstruktur_omfang" type="RASTER">
+    [datasource:wms_fbb_bebyggetstruktur_omfang.mapfile-datasource]        
+        <transparency>100</transparency>
+    </layer>
+	
+	 <!-- dummy data til at danne signaturforklaring -->
+    
+    <layer datasource="dummy" name="dummy" type="polygon">
+        <class>
+            <name>Bebygget struktur, omfangspolygon</name>
+			<style>
+                <outlinecolor>81 139 254</outlinecolor>
+				<color>255 255 255</color>
+            </style>
+        </class>
+	</layer>
+</theme>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<datasources>
+
+    <!-- ========================================================= -->
+    <!--  Endpoints                                                -->
+    <!-- ========================================================= -->
+
+    <!-- https://www.kulturarv.dk/geoserver/wms?service=WMS&amp;version1.1&amp;request=GetCapabilities -->
+    <endpoint name="wms_fbb" endpointtype="wms">
+        <service>https://www.kulturarv.dk/geoserver/wms</service>
+        <parameters>
+            <servicename>WMS</servicename>
+        </parameters>
+    </endpoint>
+    
+    <!-- https://www.kulturarv.dk/geoserver/wfs?service=WFS&version=1.1.0&request=GetCapabilities -->
+    <endpoint name="wfs_fbb" endpointtype="wfs">
+        <service>https://www.kulturarv.dk/geoserver/wfs</service>
+        <kvpbboxencoding>bbox</kvpbboxencoding>
+        <parameters>
+            <service>wfs</service>
+        </parameters>
+        <debug>true</debug>
+    </endpoint>
+
+	 <!-- http://www.kulturarv.dk/ffpublic/wms/ows?service=wms&request=getcapabilities-->
+    <endpoint name="wms_kust" endpointtype="wms">
+        <service>http://www.kulturarv.dk/ffpublic/wms</service>
+        <parameters>
+         <servicename>WMS</servicename>   
+        </parameters>
+    </endpoint>
+    
+    <!--http://www.kulturarv.dk/ffpublic/wfs/ows?service=getcapabilities-->
+    
+    <endpoint name="wfs_kust" endpointtype="wfs">
+        <service>http://www.kulturarv.dk/ffpublic/wfs</service>
+        <kvpbboxencoding>BBOX</kvpbboxencoding>
+        <parameters>
+            <service>wfs</service>
+        </parameters>		
+		<debug>true</debug>
+    </endpoint>    
+
+    <!-- ========================================================= -->
+    <!--  Datasources                                              -->
+    <!-- ========================================================= -->
+
+    <datasource name="wms_fbb_view_bygning_fredede" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bygning_fredede</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_view_bygning_fredede" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bygning_fredede</typename>
+        </wfs>
+    </datasource>
+
+    <datasource name="wms_fbb_view_bygning_bevaringssag" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bygning_bevaringssag</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_view_bygning_bevaringssag" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bygning_bevaringssag</typename>
+        </wfs>
+    </datasource>
+
+    <datasource name="wms_fbb_view_bygning_fredningstatus_hoej" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bygning_fredningstatus_hoej</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_view_bygning_fredningstatus_hoej" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bygning_fredningstatus_hoej</typename>
+        </wfs>
+    </datasource>
+
+    <datasource name="wms_fbb_view_bygning_fredningstatus_med" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bygning_fredningstatus_med</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_view_bygning_fredningstatus_med" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bygning_fredningstatus_med</typename>
+        </wfs>
+    </datasource>
+
+    <datasource name="wms_fbb_view_bygning_fredningstatus_lav" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bygning_fredningstatus_lav</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_view_bygning_fredningstatus_lav" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bygning_fredningstatus_lav</typename>
+        </wfs>
+    </datasource>
+
+    <datasource name="wms_fbb_view_bygning_alle" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bygning_alle</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_view_bygning_alle" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bygning_alle</typename>
+        </wfs>
+    </datasource>
+	
+	<datasource name="wms_fbb_bebyggetstruktur_vej" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bebyggetstruktur_vej</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_bebyggetstruktur_vej" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bebyggetstruktur_vej</typename>
+        </wfs>
+    </datasource>
+	
+	<datasource name="wms_fbb_bebyggetstruktur_udsigt" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bebyggetstruktur_udsigt</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_bebyggetstruktur_udsigt" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bebyggetstruktur_udsigt</typename>
+        </wfs>
+    </datasource>
+	
+	<datasource name="wms_fbb_bebyggetstruktur_traeraekke" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bebyggetstruktur_traeraekke</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_bebyggetstruktur_traeraekke" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bebyggetstruktur_traeraekke</typename>
+        </wfs>
+    </datasource>
+	
+	<datasource name="wms_fbb_bebyggetstruktur_torv" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bebyggetstruktur_torv</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_bebyggetstruktur_torv" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bebyggetstruktur_torv</typename>
+        </wfs>
+    </datasource>
+	
+	<datasource name="wms_fbb_bebyggetstruktur_rumdannendebygning" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bebyggetstruktur_rumdannendebygning</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_bebyggetstruktur_rumdannendebygning" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bebyggetstruktur_rumdannendebygning</typename>
+        </wfs>
+    </datasource>
+	
+	<datasource name="wms_fbb_bebyggetstruktur_omfang" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bebyggetstruktur_omfang</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_bebyggetstruktur_omfang" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bebyggetstruktur_omfang</typename>
+        </wfs>
+    </datasource>
+	
+	<datasource name="wms_fbb_bebyggetstruktur_indkig" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bebyggetstruktur_indkig</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_bebyggetstruktur_indkig" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bebyggetstruktur_indkig</typename>
+        </wfs>
+    </datasource>
+	
+	<datasource name="wms_fbb_bebyggetstruktur_enkeltstaaendetrae" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bebyggetstruktur_enkeltstaaendetrae</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_bebyggetstruktur_enkeltstaaendetrae" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bebyggetstruktur_enkeltstaaendetrae</typename>
+        </wfs>
+    </datasource>
+	
+	<datasource name="wms_fbb_bebyggetstruktur_dominerendebygning" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bebyggetstruktur_dominerendebygning</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_bebyggetstruktur_dominerendebygning" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bebyggetstruktur_dominerendebygning</typename>
+        </wfs>
+    </datasource>
+	
+	<datasource name="wms_fbb_bebyggetstruktur_bebyggelsesmoenster" endpoint="wms_fbb">
+        <wms>
+            <layers>view_bebyggetstruktur_bebyggelsesmoenster</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_bebyggetstruktur_bebyggelsesmoenster" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:view_bebyggetstruktur_bebyggelsesmoenster</typename>
+        </wfs>
+    </datasource>
+	
+	<!-- <datasource name="wms_fbb_kommuneatlas" endpoint="wms_fbb">
+        <wms>
+            <layers>kommuneatlas</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_kommuneatlas" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:kommuneatlas</typename>
+        </wfs>
+    </datasource> -->
+	
+	<!-- <datasource name="wms_fbb_bygningslag" endpoint="wms_fbb">
+        <wms>
+            <layers>bygningslag</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+    </datasource>
+    <datasource name="wfs_fbb_bygningslag" endpoint="wfs_fbb">
+        <wfs geometrycolumn="geom">
+            <typename>fbb:bygningslag</typename>
+        </wfs>
+    </datasource> -->
+	
+	<!-- Fund & fortidsminder -->
+	
+	
+     <datasource name="kust_wms_areal_beskyttelse" endpoint="wms_kust">
+        <wms>
+            <layers>fundogfortidsminder_areal_beskyttelse</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+        <parameters>
+            <servicename>WMS</servicename>
+        </parameters>
+    </datasource>
+    <!-- http://www.kulturarv.dk/ffpublic/wfs/ows?service=wfs&request=DescribeFeatureType&version=1.0.0&typename=fourf:fundogfortidsminder_areal_beskyttelse -->
+    <datasource name="kust_wfs_fundogfortidsminder_areal_beskyttelse" endpoint="wfs_kust">  
+        <wfs geometrycolumn="geom">
+            <typename>fourf:fundogfortidsminder_areal_beskyttelse</typename>
+        </wfs>
+        <parameters>
+            <servicename>WFS</servicename>
+        </parameters>
+      </datasource>    
+      
+      <datasource name="kust_wms_fundogfortidsminder_areal_alle" endpoint="wms_kust">
+        <wms>
+            <layers>fundogfortidsminder_areal_alle</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+        <parameters>
+            <servicename>WMS</servicename>
+        </parameters>
+    </datasource>
+    <!-- http://www.kulturarv.dk/ffpublic/wfs/ows?service=wfs&request=DescribeFeatureType&version=1.0.0&typename=fourf:fundogfortidsminder_areal_alle -->
+    <datasource name="kust_wfs_fundogfortidsminder_areal_alle" endpoint="wfs_kust">  
+        <wfs geometrycolumn="geom">
+            <typename>fourf:fundogfortidsminder_areal_alle</typename>
+        </wfs>
+        <parameters>
+            <servicename>WFS</servicename>
+        </parameters>
+      </datasource> 
+
+      <!--Lokaliteter, alle administrative arealer-->
+      <datasource name="kust_wms_fundogfortidsminder_areal_adm" endpoint="wms_kust">
+        <wms>
+            <layers>fundogfortidsminder_areal_adm</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+        <parameters>
+            <servicename>WMS</servicename>
+        </parameters>
+    </datasource>
+    <!-- http://www.kulturarv.dk/ffpublic/wfs/ows?service=wfs&request=DescribeFeatureType&version=1.0.0&typename=fourf:fundogfortidsminder_areal_adm -->
+    <!-- Udeladt, da temaet kun bruges intern af museer til arealer, der skal unders_-->
+    <datasource name="kust_wfs_fundogfortidsminder_areal_adm" endpoint="wfs_kust">  
+        <wfs geometrycolumn="geom">
+            <typename>fourf:fundogfortidsminder_areal_adm</typename>
+        </wfs>
+        <parameters>
+            <servicename>WFS</servicename>
+        </parameters>
+      </datasource> 
+      
+      <datasource name="kust_wms_fundogfortidsminder_areal_ka" endpoint="wms_kust">
+        <wms>
+            <layers>fundogfortidsminder_areal_ka</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+        <parameters>
+            <servicename>WMS</servicename>
+        </parameters>
+    </datasource>
+    <!-- http://www.kulturarv.dk/ffpublic/wfs/ows?service=wfs&request=DescribeFeatureType&version=1.0.0&typename=fourf:fundogfortidsminder_areal_ka -->
+    <datasource name="kust_wfs_fundogfortidsminder_areal_ka" endpoint="wfs_kust">  
+        <wfs geometrycolumn="geom">
+            <typename>fourf:fundogfortidsminder_areal_ka</typename>
+        </wfs>
+        <parameters>
+            <servicename>WFS</servicename>
+        </parameters>
+      </datasource>   
+      
+      <datasource name="kust_wms_fundogfortidsminder_linie_alle" endpoint="wms_kust">
+        <wms>
+            <layers>fundogfortidsminder_linie_alle</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+        <parameters>
+            <servicename>WMS</servicename>
+        </parameters>
+    </datasource>
+    <!-- http://www.kulturarv.dk/ffpublic/wfs/ows?service=wfs&request=DescribeFeatureType&version=1.0.0&typename=fourf:fundogfortidsminder_linie_alle -->
+    <datasource name="kust_wfs_fundogfortidsminder_linie_alle" endpoint="wfs_kust">  
+        <wfs geometrycolumn="geom">
+            <typename>fourf:fundogfortidsminder_linie_alle</typename>
+        </wfs>
+        <parameters>
+            <servicename>WFS</servicename>
+        </parameters>
+      </datasource>   
+
+     <!--Alle fredede lokaliteter-->
+     <datasource name="kust_wms_punkt_fredet" endpoint="wms_kust">
+        <wms>
+            <layers>fundogfortidsminder_punkt_fredet</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+        <parameters>
+            <servicename>WMS</servicename>
+        </parameters>
+    </datasource>
+    <!-- http://www.kulturarv.dk/ffpublic/wfs/ows?service=wfs&request=DescribeFeatureType&version=1.0.0&typename=fourf:fundogfortidsminder_punkt_fredet -->  
+    <datasource name="kust_wfs_fundogfortidsminder_punkt_fredet" endpoint="wfs_kust">  
+        <wfs geometrycolumn="geom">
+            <typename>fourf:fundogfortidsminder_punkt_fredet</typename>
+        </wfs>
+        <parameters>
+            <servicename>WFS</servicename>
+        </parameters>
+    </datasource>
+    
+    <!--Alle ikke fredede lokaliteter-->
+    <datasource name="kust_wms_punkt_ikkefredet" endpoint="wms_kust">
+        <wms>
+            <layers>fundogfortidsminder_punkt_ikkefredet</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+        <parameters>
+            <servicename>WMS</servicename>
+        </parameters>
+    </datasource>
+    <!-- http://www.kulturarv.dk/ffpublic/wfs/ows?service=wfs&request=DescribeFeatureType&version=1.0.0&typename=fourf:fundogfortidsminder_punkt_ikkefredet -->  
+    <datasource name="kust_wfs_fundogfortidsminder_punkt_ikkefredet" endpoint="wfs_kust">  
+        <wfs geometrycolumn="geom">
+            <typename>fourf:fundogfortidsminder_punkt_ikkefredet</typename>
+        </wfs>
+        <parameters>
+            <servicename>WFS</servicename>
+        </parameters>
+    </datasource>
+    
+    <datasource name="kust_wms_fundogfortidsminder_komplet" endpoint="wms_kust">
+        <wms>
+            <layers>fundogfortidsminder_komplet</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+        <parameters>
+            <servicename>WMS</servicename>
+        </parameters>
+    </datasource>  
+    <datasource name="kust_wfs_fundogfortidsminder_komplett" endpoint="wfs_kust">  
+        <wfs geometrycolumn="geom">
+            <typename>fourf:fundogfortidsminder_komplet</typename>
+        </wfs>
+        <parameters>
+            <servicename>WFS</servicename>
+        </parameters>
+    </datasource>
+    
+    <datasource name="kust_relief" endpoint="wms_kust">
+        <wms>
+            <layers>relief</layers>
+            <format>image/png</format>
+            <transparent>true</transparent>
+        </wms>
+        <parameters>
+            <servicename>WMS</servicename>
+        </parameters>
+    </datasource>
+    
+	
+ </datasources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<theme>
+    <cbinfo-metadata>
+        <param name="metadata.url"/>
+        <param name="copyright-text">&#169; Kulturarvsstyrelsen</param>
+        <param name="copyright.url">http://www.kulturarv.dk/databaser/fredede-og-bevaringsvaerdige-bygninger/</param>
+        <param name="metadata.text">Bygninger med bevaringssag er bygninger, hvortil der er knyttet en statslig eller kommunal bevaringssag. Bygninger med høj eller lav bevaringsværdi er derimod blevet vurderet i en undersøgelse og tildelt en bevaringsværdi.</param>
+    </cbinfo-metadata>
+
+    <clientlayers>
+        <clientlayer>
+            <datasource>wms_fbb_view_bygning_bevaringssag</datasource>
+            <singletile>false</singletile>
+        </clientlayer>
+    </clientlayers>
+
+    <layer name="view_bygning_bevaringssag" type="RASTER">
+    [datasource:wms_fbb_view_bygning_bevaringssag.mapfile-datasource]        
+        <transparency>100</transparency>
+    </layer>
+	
+	 <!-- dummy data til at danne signaturforklaring -->
+    
+    <layer datasource="dummy" name="dummy" type="point">
+        <class>
+            <name>Bygning med bevaringssag</name>
+			<style>
+                <symbol>bygning_bevaringssag</symbol>
+            </style>
+        </class>
+	</layer>
+</theme>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spatialqueries>
+    <targetset name="Fredede_og_bevaringsvaerdige_bygninger">
+        <target displayname="KUST - fredede bygninger"
+            condition="IsDefined(seek_all_themes) or InList('theme-view_bygning_fredede',layers, ' ')"
+            name="view_bygning_fredede" presentation="[module:kust.dir]/presentations/pres-view_bygning_fredede">
+            <datasource name="wfs_fbb_view_bygning_fredede"/>
+        </target>
+        <target displayname="KUST - Bygninger med bevaringssag"
+            condition="IsDefined(seek_all_themes) or InList('theme-view_bygning_bevaringssag',layers, ' ')"
+            name="view_bygning_bevaringssag" presentation="[module:kust.dir]/presentations/pres-view_bygning_bevaringssag">
+            <datasource name="wfs_fbb_view_bygning_bevaringssag"/>
+        </target>
+        <target displayname="KUST - bygning med høj bevaringsværdi"
+            condition="IsDefined(seek_all_themes) or InList('theme-view_bygning_fredningstatus_hoej',layers, ' ')"
+            name="view_bygning_fredningstatus_hoej" presentation="[module:kust.dir]/presentations/pres-view_bygning_fredningstatus_hoej">
+            <datasource name="wfs_fbb_view_bygning_fredningstatus_hoej"/>
+        </target>
+        <target displayname="KUST - bygning med medium bevaringsværdi"
+            condition="IsDefined(seek_all_themes) or InList('theme-view_bygning_fredningstatus_med',layers, ' ')"
+            name="view_bygning_fredningstatus_med" presentation="[module:kust.dir]/presentations/pres-view_bygning_fredningstatus_med">
+            <datasource name="wfs_fbb_view_bygning_fredningstatus_med"/>
+        </target>
+        <target displayname="KUST - bygning med lav bevaringsværdi"
+            condition="IsDefined(seek_all_themes) or InList('theme-view_bygning_fredningstatus_lav',layers, ' ')"
+            name="view_bygning_fredningstatus_lav" presentation="[module:kust.dir]/presentations/pres-view_bygning_fredningstatus_lav">
+            <datasource name="wfs_fbb_view_bygning_fredningstatus_lav"/>
+        </target>
+        <target displayname="KUST - alle bygninger"
+            condition="IsDefined(seek_all_themes) or InList('theme-view_bygning_alle',layers, ' ')"
+            name="view_bygning_alle" presentation="[module:kust.dir]/presentations/pres-view_bygning_alle">
+            <datasource name="wfs_fbb_view_bygning_alle"/>
+        </target>
+    </targetset>
+		<targetset name="fundogfortidsminder">
+		<target displayname="KUST - Fredet Fortidsminde" name="target_kust_wfs_fundogfortidsminder_punkt_fredet" condition="IsDefined(seek_all_themes) or InList('theme-kust-fortidsminder_punkt_fredet',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-kust_fundogfortidsminder_punkt_fredet">
+        <datasource name="kust_wfs_fundogfortidsminder_punkt_fredet"/>
+    </target>
+    <target displayname="KUST - Ikke fredet fortidsminde" name="target_kust_wfs_fundogfortidsminder_punkt_ikkefredet" condition="IsDefined(seek_all_themes) or InList('theme-kust-fundogfortidsminder_punkt_ikkefredet',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-kust_fundogfortidsminder_punkt_ikkefredet">
+        <datasource name="kust_wfs_fundogfortidsminder_punkt_ikkefredet"/>
+    </target>
+    <target displayname="KUST - Fredede fortidsminder (linjer)" name="target_kust_wfs_fundogfortidsminder_linie_alle" condition="IsDefined(seek_all_themes) or InList('theme-kust-fundogfortidsminder_linie_alle',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-kust_fundogfortidsminder_linie_alle">
+        <datasource name="kust_wfs_fundogfortidsminder_linie_alle"/>
+    </target>
+    <target displayname="KUST - Kulturarvsareal" name="target_kust_wfs_fundogfortidsminder_areal_ka" condition="IsDefined(seek_all_themes) or InList('theme-kust-fundogfortidsminder_areal_ka',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-kust_fundogfortidsminder_areal_ka">
+        <datasource name="kust_wfs_fundogfortidsminder_areal_ka"/>
+    </target>
+    <target displayname="KUST - Fortidsminde arealer" name="target_kust_wfs_fundogfortidsminder_areal_alle" condition="IsDefined(seek_all_themes) or InList('theme-kust-fundogfortidsminder_areal_alle',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-kust_fundogfortidsminder_areal_alle">
+        <datasource name="kust_wfs_fundogfortidsminder_areal_alle"/>
+    </target>
+
+     <target displayname="KUST-Fortidsminde areal" name="target_kust-fortidsminder_areal_beskyttelse" condition="IsDefined(seek_all_themes) or InList('theme-kust-fortidsminder_areal_beskyttelse',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-kust_fundogfortidsminder_areal_beskyttelse">
+        <datasource name="kust_wfs_fundogfortidsminder_areal_beskyttelse"/>
+    </target>
+    
+    <target displayname="KUST - Ikke fredet fortidsminde" name="target_kust_wfs_fundogfortidsminder_punkt_fredet" condition="IsDefined(seek_all_themes) or InList('theme-kust-fundogfortidsminder_komplet',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-kust_fundogfortidsminder_punkt_fredet">
+        <datasource name="kust_wfs_fundogfortidsminder_punkt_ikkefredet"/>
+    </target>
+    <target displayname="KUST - Fredet Fortidsminde" name="target_kust_wfs_fundogfortidsminder_punkt_fredet" condition="IsDefined(seek_all_themes) or InList('theme-kust-fundogfortidsminder_komplet',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-kust_fundogfortidsminder_punkt_fredet">
+        <datasource name="kust_wfs_fundogfortidsminder_punkt_fredet"/>
+    </target>
+    <target displayname="KUST - Fredet Fortidsminder 100m beskyttet areal" name="target_kust_wfs_fundogfortidsminder_punkt_fredet" condition="IsDefined(seek_all_themes) or InList('theme-kust-fundogfortidsminder_komplet',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-kust_fundogfortidsminder_punkt_fredet">
+        <datasource name="kust_wfs_fundogfortidsminder_areal_beskyttelse"/>
+    </target>
+    <target displayname="KUST - Kulturarvsareal" name="target_kust_wfs_fundogfortidsminder_punkt_fredet" condition="IsDefined(seek_all_themes) or InList('theme-kust-fundogfortidsminder_komplet',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-kust_fundogfortidsminder_punkt_fredet">
+        <datasource name="kust_wfs_fundogfortidsminder_areal_ka"/>
+    </target>
+    <target displayname="KUST - Fortidsminde areal" name="target_kust_wfs_fundogfortidsminder_punkt_fredet" condition="IsDefined(seek_all_themes) or InList('theme-kust-fundogfortidsminder_komplet',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-kust_fundogfortidsminder_punkt_fredet">
+        <datasource name="kust_wfs_fundogfortidsminder_areal_alle"/>
+    </target>
+	</targetset>
+	<targetset name="bebyggetstruktur">
+		<target displayname="KUST - Sigtelinje, indkig" name="target_kust_wfs_fbb_indkig" condition="IsDefined(seek_all_themes) or InList('theme-view-bebyggetstruktur_indkig',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-view-bebyggetstruktur_indkig">
+        <datasource name="wfs_fbb_bebyggetstruktur_indkig"/>
+    </target>
+	<target displayname="KUST - udsigt, vue" name="target_kust_wfs_fbb_udsigt" condition="IsDefined(seek_all_themes) or InList('theme-view-bebyggetstruktur_udsigt',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-view-bebyggetstruktur_udsigt">
+        <datasource name="wfs_fbb_bebyggetstruktur_udsigt"/>
+    </target>
+		<target displayname="KUST - dominerende bygningsværk" name="target_kust_wfs_fbb_dominerendebygning" condition="IsDefined(seek_all_themes) or 	InList('theme-view-bebyggetstruktur_dominerendebygning',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-view-bebyggetstruktur_dominerendebygning">
+        <datasource name="wfs_fbb_bebyggetstruktur_dominerendebygning"/>
+    </target>
+	<target displayname="KUST - rumdannende bygning" name="target_kust_wfs_fbb_rumdannendebygning" condition="IsDefined(seek_all_themes) or 	InList('theme-view-bebyggetstruktur_rumdannendebygning',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-view-bebyggetstruktur_dominerendebygning">
+        <datasource name="wfs_fbb_bebyggetstruktur_rumdannendebygning"/>
+    </target>
+	<target displayname="KUST - enkeltstående træ" name="target_kust_wfs_fbb_enkeltstaandetrae" condition="IsDefined(seek_all_themes) or 	InList('theme-view-bebyggetstruktur_enkeltstaandetrae',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-view-bebyggetstruktur_enkeltstaaendetrae">
+        <datasource name="wfs_fbb_bebyggetstruktur_enkeltstaaendetrae"/>
+    </target>
+	<target displayname="KUST - trærække, allé" name="target_kust_wfs_fbb_traeraekke" condition="IsDefined(seek_all_themes) or 	InList('theme-view-bebyggetstruktur_traeraekke',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-view-bebyggetstruktur_traeraekke">
+        <datasource name="wfs_fbb_bebyggetstruktur_traeraekke"/>
+    </target>
+	<target displayname="KUST - omfangspolygon" name="target_kust_wfs_fbb_omfang" condition="IsDefined(seek_all_themes) or 	InList('theme-view-bebyggetstruktur_omfang',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-view-bebyggetstruktur_omfang">
+        <datasource name="wfs_fbb_bebyggetstruktur_omfang"/>
+    </target>
+	<target displayname="KUST - bebyggelsesmønster" name="target_kust_wfs_fbb_bebyggelsesmoenster" condition="IsDefined(seek_all_themes) or 	InList('theme-view-bebyggetstruktur_bebyggelsesmoenster',layers, ' ')" presentation="[module:kust.dir]/presentations/pres-view-bebyggetstruktur_bebyggelsesmoenster">
+        <datasource name="wfs_fbb_bebyggetstruktur_bebyggelsesmoenster"/>
+    </target>
+	</targetset>
+</spatialqueries>

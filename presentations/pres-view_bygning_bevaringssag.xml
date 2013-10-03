@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<presentation>
+  <text name="overskrift" value="Bygning med bevaringssag" plural="Bygninger med bevaringssag"/>
+
+      <columns>
+          <column format="heading">
+              <label>TOSTRING(adresse)</label>
+              <value>TOSTRING(adresse)</value>
+          </column>
+          <column name="1">
+              <condition>isDefined(fredningsstatus)</condition>        
+              <label>'Fredningsstatus:'</label>
+              <value>fredningsstatus</value>
+          </column>
+          <column name="2">
+              <condition>isDefined(bevaringsvaerdi)</condition>
+              <label>'Bevaringsværdi:'</label>
+              <value>bevaringsvaerdi</value>
+          </column>
+          <column name="3">
+              <condition>isDefined(adresse)</condition>
+              <label>'Adresse:'</label>
+              <value>adresse</value>
+          </column>
+          <column name="4">
+              <condition>isDefined(kommune)</condition>
+              <label>'Kommune:'</label>
+              <value>kommune</value>
+          </column>
+          <column name="5">
+              <condition>isDefined(bygningsid)</condition>        
+              <label>'Bygningsid:'</label>
+              <value>bygningsid</value>
+          </column>
+          <column name="6">
+              <condition>isDefined(bbrnummer)</condition>
+              <label>'BBR nummer:'</label>
+              <value>bbrnummer</value>
+          </column>
+          <column name="7">
+              <condition>isDefined(fredet)</condition>
+              <label>'Fredet:'</label>
+              <value>if fredet = "true" then 'Ja' else 'Nej' endif </value>
+          </column>
+		  <column format="hyperlink">
+			<condition>isDefined(bygningsid)</condition>
+            <label>'Link til fredede &amp; bevaringsværdige bygninger'</label>
+            <value>"https://www.kulturarv.dk/fbb/bygningvis.pub?bygning="+bygningsid+"</value>
+        </column>
+          <column format="org-pcolid">
+              <label>
+                  if IsDefined(shape_wkt) then
+                      GeometryType(shape_wkt)
+                  else
+                      "GEOMETRY UNDEFINED"
+                  endif
+              </label>
+              <value>pcolid</value>
+          </column>
+      </columns>
+</presentation>

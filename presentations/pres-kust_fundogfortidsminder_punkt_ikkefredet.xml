@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<presentation>
+  <text name="overskrift" value="Ikke fredet lokalitet" plural="Ikke fredede lokaliteter"/>
+
+      <columns>
+          <column format="heading">
+              <label>TOSTRING(anlaegstype)</label>
+              <value>TOSTRING(anlaegstype)</value>
+          </column>
+          <column format="org-pcolid">
+              <label>
+                  if IsDefined(shape_wkt) then
+                      GeometryType(shape_wkt)
+                  else
+                      "GEOMETRY UNDEFINED"
+                  endif
+              </label>
+              <value>pcolid</value>
+          </column>
+  
+          <column name="1">
+              <condition>isDefined(systemnr)</condition>        
+              <label>'Systemnr:'</label>
+              <value>systemnr</value>
+          </column>
+          <column name="2">
+              <condition>isDefined(stednr)</condition>
+              <label>'Stednr:'</label>
+              <value>stednr</value>
+          </column>
+          <column name="3">
+              <condition>isDefined(loknr)</condition>
+              <label>'Loknr:'</label>
+              <value>loknr</value>
+          </column>
+          <column name="4">
+              <condition>isDefined(frednr)</condition>
+              <label>'Fredningsnr:'</label>
+              <value>frednr</value>
+          </column>
+          <column name="5">
+              <condition>isDefined(anlaegstype)</condition>
+              <label>'Anlægstype:'</label>
+              <value>anlaegstype</value>
+          </column>
+          <column name="6">
+              <condition>isDefined(datering)</condition>
+              <label>'Datering:'</label>
+              <value>datering</value>
+          </column>
+          <column name="7">
+              <condition>isDefined(zone)</condition>        
+              <label>'Zone:'</label>
+              <value>zone</value>
+          </column>
+          <column name="8" format="hyperlink">
+              <condition>isDefined(url)</condition>
+              <label>'Læs mere...'</label>
+              <value>tostring(url)</value>
+          </column>
+      </columns>
+
+
+
+
+</presentation>
